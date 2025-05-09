@@ -1,0 +1,124 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.parent{
+    background-image: linear-gradient(rgba(6, 23, 16, 0.799) ,rgba(0,0,0,0.7)), url(../images/bgfile.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+  
+.container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+  
+  .upload-section, .form-section {
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 400px;
+  }
+  
+  .upload-box {
+    text-align: center;
+    border: 2px dashed #4CAF50;
+    border-radius: 8px;
+    padding: 30px;
+  }
+  
+  .upload-icon {
+    font-size: 40px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+  }
+  
+  .upload-box p {
+    margin: 10px 0;
+    color:#ccc;
+  }
+  
+  .upload-box button {
+    margin-top: 10px;
+    background-color: #072c09;
+    color: #ccc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .upload-box button:hover {
+    background-color: #3b9442;
+  }
+  
+  .form-section h2 {
+    margin-bottom: 15px;
+    color: #ccc;
+  }
+  
+  .form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-section input, .form-section textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .form-section button {
+    background-color: #072c09;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+.form-section button:hover {
+    background-color: #0c5a2c;
+}
+.choosefile{
+    display: inline-block;
+  padding: 10px 20px;
+  background-color: #0d450f;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="file"],
+form textarea {
+  background-color: rgba(255, 255, 255, 0.1); /* semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white; /* make sure text is visible */
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.center{
+    position: relative;
+    top: 100px;
+}
+.upload-section{
+    position: relative;
+    top: 100px;
+}

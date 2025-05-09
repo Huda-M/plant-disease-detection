@@ -1,0 +1,173 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.clear{
+    clear: both;
+}
+ul{
+    list-style: none;
+}
+.parent{
+    background-image: url(../images/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+.navbar{
+    width: 90%;
+    margin: auto;
+  
+}
+.logo img{
+    width:90px;
+    position: relative;
+    top: 20px;
+}
+.navbar .navitems ul{
+    float: right;
+    
+    position: relative;
+    top: -45px;
+    display: flex;
+    right: 350px;
+
+}
+.parent .navbar li {
+    float: right;
+    text-decoration: none;
+    padding-right: 50px;
+    color: #e4dada;
+    font-size: 20px;
+}
+.parent .navbar li:hover {
+    color: #09411f;
+}
+.btns {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btns .btn {
+    padding: 10px 17px;
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.btns .login {
+    background-color: #09411f;
+    border: 2px solid transparent;
+}
+
+.btns .signup {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.btns .btn:hover {
+    background-color: #fff;
+    color: black;
+    transform: scale(1.1);
+}
+.parent .parentcontent {
+    position: relative;
+    top: 100px;
+    left: 70px;
+    color: #e4dada;
+    font-size: 20px;
+    font-weight: 700;
+}
+.parentcontent p {
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+    font-weight: 100;
+}
+.getstarted .btn {
+    position: absolute;
+    left: 145px;
+    top:380px ;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    color: whitesmoke;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.getstarted .btn:hover {
+    transform: translateX(-50%) scale(1.1);
+    color: white;
+    background-color: #06451f;
+}
+.bottoms {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 150px; /* for vertical spacing */
+    gap: 20px;
+    position: relative;
+    top: 70px;
+}
+.bottoms a {
+    text-decoration: none;
+}
+.bottoms .but {
+    display: block;
+    width: 30%;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #032812;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    text-align: center;
+    padding: 20px;
+    
+    color: inherit; /* ensures text uses normal color */
+}
+.bottoms .but:hover {
+    transform:  scale(1.1);
+    color: white;
+   
+}
+.bottoms .but img{
+    width: 60px;
+    position: relative;
+    top: -40px;
+}
+.bottoms .but p{
+    color: #e4dada;
+}
+.bottoms .but h3{
+    color: #e4dada;
+}
+.bottoms .but img.big {
+    width: 130px; /* increase as needed */
+    height: auto;
+    position: relative;
+    top: -55px;
+
+}
+.bottoms .but .big2{
+    position: relative;
+    top: -20px;
+
+}

@@ -1,0 +1,687 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.parent {
+    background-image: linear-gradient(rgba(6, 23, 16, 0.799), rgba(0, 0, 0, 0.7)), url(../images/bgfile.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    height: 80px;
+    width: 90%;
+    margin: auto;
+}
+
+.logo img {
+    width: 100px;
+    position: relative;
+    top: 9px;
+    left: -70px;
+    background-color: transparent;
+}
+
+.logo .logoname {
+    position: relative;
+    left: -75px;
+    top: 7px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #e4dada;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; /* stay above all other content */
+    background-color: #02220e; /* add background so it doesn't become transparent */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* optional: gives a shadow effect */
+}
+
+
+.parent .navbar ul {
+   
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.parent .navbar li {
+    float: right;
+    text-decoration: none;
+    padding-right: 50px;
+    color: #e4dada;
+    font-size: 20px;
+}
+
+.parent .navbar li:hover {
+    color: #09411f;
+}
+
+.btns {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btns .btn {
+    padding: 10px 17px;
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.btns .login {
+    background-color: #09411f;
+    border: 2px solid transparent;
+}
+
+.btns .signup {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.btns .btn:hover {
+    background-color: #fff;
+    color: black;
+    transform: scale(1.1);
+}
+
+.parent .parentcontent {
+    position: relative;
+    top: 200px;
+    left: 70px;
+    color: #e4dada;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.parentcontent p {
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+}
+
+.parentcontent .btn2 {
+    display: inline-block;
+    text-decoration: none; /* Removes underline */
+    background-color: transparent;
+    padding: 10px 17px;
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 3px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+    top: 80px;
+    left: 8px;
+    z-index: 10;
+}
+
+
+.parentcontent .btn2:hover {
+    background-color: #fff;
+    color: black;
+    transform: scale(1.1);
+}
+
+
+
+.sideimage {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+
+
+
+
+
+.sideimage img {
+    
+    position: relative;
+    filter: drop-shadow(4px 4px 9px rgba(0, 0, 0, 0.1));
+    animation: floatAnimation 3s ease-in-out infinite;
+    bottom: 45px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.sideimage img:hover {
+    animation: shake 0.7s ease;
+}
+
+.getstarted .btn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    color: whitesmoke;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.getstarted .btn:hover {
+    transform: translateX(-50%) scale(1.1);
+    color: black;
+    background-color: #ccc;
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        padding-left: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        left: 0;
+        width: 80px;
+    }
+
+    .logo .logoname {
+        left: 0;
+        top: 0;
+        font-size: 14px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        position: static;
+        padding-left: 20px;
+    }
+
+    .navbar li {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .btns {
+        position: static;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .btns .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .parent .parentcontent {
+        top: 100px;
+        left: 20px;
+        font-size: 16px;
+    }
+
+    .parentcontent p {
+        font-size: 16px;
+    }
+
+    .parentcontent .btn2 {
+        top: 40px;
+        left: 0;
+        font-size: 14px;
+    }
+
+    .video-button {
+        left: 20px;
+        top: 20px;
+    }
+
+    .sideimage img {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .getstarted .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logo img {
+        width: 90px;
+    }
+
+    .logo .logoname {
+        font-size: 16px;
+    }
+
+    .navbar li {
+        font-size: 18px;
+        padding-right: 30px;
+    }
+
+    .btns .btn {
+        font-size: 16px;
+        padding: 9px 16px;
+    }
+
+    .parentcontent {
+        top: 150px;
+        left: 50px;
+        font-size: 18px;
+    }
+
+    .sideimage img {
+        width: 300px;
+    }
+}
+
+/* Desktops (1025px and above) */
+@media (min-width: 1025px) {
+    .navbar ul {
+        display: flex;
+    }
+
+    .sideimage img {
+        width: 400px;
+    }
+
+    .parentcontent {
+        top: 200px;
+        left: 70px;
+    }
+}
+
+/* ========== Second Section ========== */
+.second {
+    background-color: #021d0d;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 50px;
+    
+}
+
+.secondcontent h1 {
+    text-align: center;
+    color: #e4dada;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.second .allimages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.image-container {
+    width: calc(33.33% - 20px);
+    height: 420px;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: #26362e;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.image-text {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.image-text1 {
+    color: #e4dada;
+    font-size: 0.9rem;
+    max-height: 180px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+/* Specific position tweaks for image layout */
+.image-container .img1 {
+    position: relative;
+    top: -40px;
+}
+
+.image-container .img2 {
+    position: relative;
+    top: -45px;
+}
+
+.text3 {
+    position: relative;
+    top: -120px;
+}
+
+.text5 {
+    position: relative;
+    top: -120px;
+}
+
+.image-container .img6 {
+    width: 280px;
+}
+
+/* ======================== */
+/* Responsive Design Rules  */
+/* ======================== */
+
+/* Mobile Devices (<= 768px) */
+@media (max-width: 768px) {
+    .second {
+        height: auto;
+        padding-top: 30px;
+    }
+
+    .secondcontent h1 {
+        font-size: 2rem;
+    }
+
+    .second .allimages {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-container img {
+        width: 100%;
+    }
+
+    .image-text1 {
+        font-size: 0.85rem;
+    }
+
+    .image-container .img6 {
+        width: 100%;
+    }
+
+    .image-container .img1,
+    .image-container .img2,
+    .text3,
+    .text5 {
+        position: static;
+        top: 0;
+    }
+}
+
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .image-container {
+        width: calc(50% - 20px);
+    }
+
+    .image-container .img6 {
+        width: 100%;
+    }
+
+    .image-container .img1,
+    .image-container .img2,
+    .text3,
+    .text5 {
+        position: static;
+        top: 0;
+    }
+}
+
+/*third page*/
+.third{
+    background-color: #021d0d;
+    height: 100vh;
+}
+.third h1{
+    color: #e4dada;
+    position: relative;
+    text-align: center;
+    top: 295px;
+}
+.thirdpage .container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.thirdpage .pagecontainer{
+    width: calc(33.33% - 20px); 
+    height: 300px; 
+    margin-bottom: 20px;
+    position: relative;
+    background-color: #26362e;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    top: 330px;
+}
+.pagecontainer:hover  {
+    transform: scale(1.05);
+}
+.pagecontainer p{
+    position: relative;
+    top: -170px;
+    text-align: center;
+    color: #e4dada;
+}
+.pagecontainer p span{
+    font-size: 18px;
+    color: #e4dada;
+    position: relative;
+    top: -10px;
+    
+    
+}
+.review span i {
+    color: gold;
+    font-size: 0.9rem;
+    margin-left: 2px;
+}
+/* General Styles for the Contact Section */
+#contact {
+    background-color: #021d0d;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    color: #ccc;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #e4dada;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Contact Form */
+#contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #ccc;
+}
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+label[for="subject"] {
+    color: #e4dada; /* Label text color */
+}
+
+#subject {
+    color: #333; /* Selected option text color */
+    background-color: #f9f9f9; /* Optional: dropdown background */
+}
+
+#contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+#contact-form button {
+    padding: 15px;
+    background-color: #094517;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #0c511b;
+}
+
+/* Contact Information */
+.contact-info {
+    margin-top: 40px;
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #e4dada;
+}
+
+.contact-info a {
+    color: #e4dada;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: none;
+}
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    padding: 10px 20px;
+    background-color: #062f10;
+    border-radius: 20px;
+    color: #e4dada;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.social-icon a:hover{
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: #ccc;
+    color: black;
+}
+
