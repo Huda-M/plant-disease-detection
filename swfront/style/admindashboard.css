@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    background-image: linear-gradient(rgba(6, 23, 16, 0.799), rgba(0, 0, 0, 0.7)), url(../images/bgfile.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+  .dashboard-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+
+    position: relative;
+    top: 10%;
+  }
+  
+  h2, h3 {
+    text-align: center;
+    color: white;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .card {
+    flex: 1 1 20%;
+    min-width: 150px;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .card h3 {
+    font-size: 24px;
+    margin-top: 15px;
+    
+  }
+  
+  .blue { background-color: #0066ff; }
+  .green { background-color: #28a745; }
+  .yellow { background-color: #ffc107; color: black; }
+  .red { background-color: #dc3545; }
+  
+  .quick-links {
+    list-style: none;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .quick-links li {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .quick-links li a {
+    display: block;
+    padding: 12px 16px;
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .quick-links li a:hover {
+    background-color: rgb(5, 68, 5);
+  }
+  
+  .footer-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .home-btn {
+    padding: 10px 20px;
+    background-color: rgb(5, 68, 5);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logout-btn {
+    padding: 10px 20px;
+    background-color: #c82333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .margin{
+    margin-bottom: 10px;
+  }

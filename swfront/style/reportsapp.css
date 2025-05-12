@@ -1,0 +1,92 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.parent {
+    background-image: linear-gradient(rgba(6, 23, 16, 0.799), rgba(0, 0, 0, 0.7)), url(images/bgfile.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+.parent a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.container {
+    margin: auto;
+    width: 90%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    position: relative;
+    top: 10%;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #2e5d47;
+  }
+
+  th {
+    background-color: #0a2016;
+  }
+  tr:nth-child(even) {
+    background-color: #0a2016;
+  }
+
+  .actions button {
+    padding: 6px 12px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .accept-btn {
+    background-color: #28a745;
+  }
+
+  .reject-btn {
+    background-color: #dc3545;
+  }
+
+  .actions button:hover {
+    opacity: 0.85;
+  }
+  .white{
+    color: rgb(216, 221, 225);
+  }
+
+
+
+
+
+
+
+
+
+.hover{
+    float: right;
+    position: relative;
+    top: 5%;
+    right: 5%;
+}

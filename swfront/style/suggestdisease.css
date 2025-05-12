@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parent {
+    background-image: linear-gradient(rgba(6, 23, 16, 0.799), rgba(0, 0, 0, 0.7)), url(../images/bgfile.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+.container {
+    max-width: 600px;
+    
+    padding: 20px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+    top: 10%;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #ccc;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ccc;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    font-size: 18px;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .submit-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: rgb(9, 66, 9);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .home-btn:hover,
+  .submit-btn:hover {
+    background-color: rgb(31, 91, 31);
+  }
+  .back-link {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }

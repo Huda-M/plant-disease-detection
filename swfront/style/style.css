@@ -20,6 +20,79 @@ ul {
     width: 100vw;
 }
 
+.burger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger div {
+    width: 100%;
+    height: 4px;
+    background-color: #ccc;
+    margin: 4px 0;
+    position:relative;
+    top: 10px; 
+    transition: 0.3s;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;  
+    width: 300px;
+    height: 100%;
+    background-color: #02220e;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: left 0.3s ease-in-out; 
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0; 
+}
+
+.sidebar-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-links li {
+    margin: 15px 0;
+}
+
+.sidebar-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.sidebar-links li a:hover {
+    color: #156c38;
+}
+
+
+.burger.active div:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.burger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    top: -10px; 
+}
+
+
 .logo {
     display: flex;
     align-items: center;
@@ -50,9 +123,9 @@ ul {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999; /* stay above all other content */
-    background-color: #02220e; /* add background so it doesn't become transparent */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* optional: gives a shadow effect */
+    z-index: 999; 
+    background-color: #02220e; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 
@@ -130,7 +203,7 @@ ul {
 
 .parentcontent .btn2 {
     display: inline-block;
-    text-decoration: none; /* Removes underline */
+    text-decoration: none;
     background-color: transparent;
     padding: 10px 17px;
     font-family: "Alegreya Sans", sans-serif;
@@ -144,7 +217,7 @@ ul {
     position: relative;
     top: 80px;
     left: 8px;
-    z-index: 10;
+    z-index: 999;
 }
 
 

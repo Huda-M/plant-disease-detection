@@ -1,0 +1,35 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(rgba(6, 23, 16, 0.799), rgba(0, 0, 0, 0.7)), url(../images/bgfile.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.card {
+    border-radius: 15px;
+}
+
+#results img {
+    max-height: 400px;
+    margin-top: 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    width: 100%;
+}
+
+.lead {
+    margin-bottom: 30px; 
+    
+}

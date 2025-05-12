@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +13,28 @@ session_start();
 <body>
     <!-- first page -->
      <div class="parent">
+        
+         <div class="burger" id="burger">
+            <div></div>
+             <div></div>
+            <div></div>
+       </div>
+
+ 
+  <div class="sidebar" id="sidebar">
+    <ul class="sidebar-links">
+        <li><a href="addpost.php">Add Post</a></li>
+        <li><a href="report.php">Report Post</a></li>
+        <li><a href="editprofile.php">Edit Profile</a></li>
+        <li><a href="changepassword.php">Change Password</a></li>
+        <li><a href="comment.php">Add Comment</a></li>
+        <li><a href="uploadcertificate.php">Upload Certificate</a></li>
+        <li><a href="suggestdisease.php">Suggest a Disease</a></li>
+        <li><a href="suggesttreatment.php">Suggest a Treatment</a></li>
+        <li><a href="admindashboard.php">Admin Dashboard</a></li>
+        
+    </ul>
+</div>
         <div class="navbar">
             <div class="logo">
                 <img src="../images/logos.png" alt="logoimage"/>
@@ -25,10 +44,9 @@ session_start();
                 <ul class="ul">
                     <a href="index.php"><li>Home</li></a>
                     <a href="#types"><li>PlantsTypes</li></a>
-                    <a href="comment.php"><li>Comment</li></a>
+                    <a href="show_posts.php"><li>Posts</li></a>
                     <a href="#more"><li>More</li></a>
                     <a href="#contact"><li>Contact</li></a>
-                    
                     
 
                    
@@ -37,13 +55,8 @@ session_start();
             </div>
             <div class="clear"></div>
             <div class="btns">
-                <?php if (isset($_SESSION['user'])): ?>
-                    
-                <a class="btn signup" href="../auth/logout.php"><?= $_SESSION['user']['name'] ?>Log out</a>
-                <?php else: ?>
-                    <a class="btn signup" href="signup.php">Sign up</a>
-                    <a class="btn login" href="login.php">Log in</a>
-                <?php endif; ?>
+                <a href="login.php" class="btn login">Log in</a>
+                <a href="signup.php" class="btn signup">Sign up</a>
             </div>
 
         </div>
@@ -52,14 +65,8 @@ session_start();
             <p>Our website helps you detect and diagnose plant diseases using advanced image analysis.
                  Simply upload<br> a photo of your plant, and get instant insights to protect and treat it effectively.</p>
             <a href="Explore.php" class="btn2">Explore</a>
-            <div class="video-button">
-                <div class="play-icon-container">
-                  <div class="red-arc"></div>
-                  <div class="play-circle">
-                    </div>
-                </div>
-             
-              </div>
+            
+            <a href="adddisease.php" class="btn2">Add Disease</a>
              </div>
              <div class="sideimage">
                 <img src="../images/image11.png" alt="plantimage"/>
@@ -198,6 +205,27 @@ session_start();
         </div>
     </div>
 </section>
+<script>
+   const burger = document.getElementById("burger");
+const sidebar = document.getElementById("sidebar");
+const name = localStorage.getItem("name") || "User";
+
+// Insert greeting without removing existing content
+if (name) {
+  const greeting = document.createElement("h2");
+  greeting.textContent = `Hello, ${name}`;
+  greeting.style.marginTop = "80px";
+  greeting.style.color = "white";
+  sidebar.prepend(greeting);
+}
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  sidebar.classList.toggle("active");
+});
+
+</script>
+
 
 
 </body>

@@ -12,14 +12,38 @@
 }
   
 .container {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 30px;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* take full height */
+  flex-direction: column;
+}
+
+  .content{
+    text-align: center;
+    position: relative;
+    top: 20px;
+    
+  }
+  .content h1{
+    color: #ccc;
+    font-size: 45px;
+  }
+  .content p{
+    color: #ccc;
+  }
+
+
   
-  .upload-section, .form-section {
+  .upload-section {
     
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -27,6 +51,8 @@
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     width: 400px;
+    
+
   }
   
   .upload-box {
@@ -34,6 +60,7 @@
     border: 2px dashed #4CAF50;
     border-radius: 8px;
     padding: 30px;
+    
   }
   
   .upload-icon {
@@ -61,35 +88,14 @@
     background-color: #3b9442;
   }
   
-  .form-section h2 {
-    margin-bottom: 15px;
-    color: #ccc;
-  }
   
-  .form-section form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
   
-  .form-section input, .form-section textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
   
-  .form-section button {
-    background-color: #072c09;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
   
-.form-section button:hover {
-    background-color: #0c5a2c;
-}
+  
+  
+  
+
 .choosefile{
     display: inline-block;
   padding: 10px 20px;
@@ -114,11 +120,21 @@ form textarea {
   width: 100%;
   box-sizing: border-box;
 }
-.center{
-    position: relative;
-    top: 100px;
+
+.prediction-box {
+  margin-top: 0px;
+  padding: 20px;
+  background-color: rgba(34, 139, 34, 0.2); 
+  border: 1px solid rgba(76, 175, 80, 0.4);
+  border-radius: 10px;
+  color: #ccc;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 100%;
 }
-.upload-section{
-    position: relative;
-    top: 100px;
+
+.prediction-box h3 {
+  margin-bottom: 10px;
+  color: #4CAF50;
+  font-size: 20px;
 }

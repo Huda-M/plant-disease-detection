@@ -30,9 +30,21 @@
     margin-bottom: 15px;
     color: #ccc;
   }
+  .commenttitle{
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    padding: 6px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    margin-bottom: 7px;
+    color: #ccc;
+  }
   
   textarea {
-    background-color: rgba(255, 255, 255, 0.1); /* semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.1); 
     border: 1px solid rgba(255, 255, 255, 0.3);
     width: 100%;
     padding: 10px;
@@ -41,9 +53,8 @@
     border: 1px solid #ccc;
     resize: vertical;
     margin-bottom: 15px;
+    color: #ccc;
   }
-
-
   
   .file-input {
     margin-bottom: 10px;
