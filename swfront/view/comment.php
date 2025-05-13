@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add a comment</title>
+    <title>Add a post</title>
     <link href="../style/commentstyle.css" rel="stylesheet" />
 </head>
 <body>
@@ -16,16 +16,16 @@ session_start();
         <h2>Add a Comment</h2>
         
         <!-- حقل العنوان (تمت إضافته) -->
-        <input class="commenttitle" type="text" name="title" placeholder="Comment Title" required>
+        <input class="commenttitle" type="text" name="title" placeholder="post Title" required>
         
         <!-- حقل النص -->
-        <textarea name="content" rows="4" placeholder="Write your comment here..." required></textarea>
+        <textarea name="content" rows="4" placeholder="Write your post here..." required></textarea>
         
         <!-- حقل الصورة -->
         <!-- <input class="file-input" type="file" name="image" accept="image/*">
         <img id="imagePreview" class="preview" alt="Image Preview"> -->
         
-        <button type="submit" class="submit-btn">Post Comment</button>
+        <button type="submit" class="submit-btn">Post post</button>
     </form>
     <!-- </div> -->
 </div>

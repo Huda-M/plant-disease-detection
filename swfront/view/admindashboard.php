@@ -1,3 +1,15 @@
+<?php
+session_start();
+require '../config/db_connection.php';
+
+// احصائيات عامة
+$totalUsers = $conn->query("SELECT COUNT(*) FROM users WHERE role = 'user'")->fetch_row()[0];
+$totalExperts = $conn->query("SELECT COUNT(*) FROM users WHERE role = 'expert'")->fetch_row()[0];
+$totalAdmins = $conn->query("SELECT COUNT(*) FROM users WHERE role = 'admin'")->fetch_row()[0];
+$totalPosts = $conn->query("SELECT COUNT(*) FROM posts")->fetch_row()[0];
+$totalReports = $conn->query("SELECT COUNT(*) FROM reports")->fetch_row()[0];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,23 +23,28 @@
         <h2>Admin Dashboard</h2>
     
         <div class="stats">
-          <div class="card blue">
-            <p>Total Users</p>
-            <h3>4</h3>
-          </div>
-          <div class="card green">
-            <p>Total Experts</p>
-            <h3>1</h3>
-          </div>
-          <div class="card yellow">
-            <p>Total Posts</p>
-            <h3>11</h3>
-          </div>
-          <div class="card red">
-            <p>Total Reports</p>
-            <h3>0</h3>
-          </div>
-        </div>
+  <div class="card blue">
+    <p>Total Users</p>
+    <h3><?= $totalUsers ?></h3>
+  </div>
+  <div class="card green">
+    <p>Total Experts</p>
+    <h3><?= $totalExperts ?></h3>
+  </div>
+  <div class="card yellow">
+    <p>Total Posts</p>
+    <h3><?= $totalPosts ?></h3>
+  </div>
+  <div class="card red">
+    <p>Total Reports</p>
+    <h3><?= $totalReports ?></h3>
+  </div>
+</div>
+<div class="card purple">
+  <p>Total Admins</p>
+  <h3><?= $totalAdmins ?></h3>
+</div>
+
     
         <h3 class="margin">Quick Links</h3>
         <ul class="quick-links">

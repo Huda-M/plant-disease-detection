@@ -32,9 +32,12 @@ session_start();
                 
                 
                    
-                <?php if (isset($error)): ?>
-            <p class="error"><?= htmlspecialchars($error); ?></p>
-        <?php endif; ?>
+                <?php if (isset($_SESSION['error'])): ?>
+                <div class="error">
+                    <?= htmlspecialchars($_SESSION['error']); ?>
+                    <?php unset($_SESSION['error']); ?>
+                </div>
+            <?php endif; ?>
         <form action="../auth/login.php" method="POST" class="form-container">
                     <label for="email">Email:</label>
                     <br>
@@ -56,4 +59,3 @@ session_start();
         </div>
         <div class="clear"></div>
 </body>
-</html>

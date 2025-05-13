@@ -9,18 +9,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['error'] = "Invalid email format!";
-        header("Location: ../view/signup.php");
+        header("Location: ../view/register.php");
         exit();
     }
 
     if (strlen($password) < 6) {
         $_SESSION['error'] = "Password must be at least 6 characters!";
-        header("Location: ../view/signup.php");
+        header("Location: ../view/register.php");
         exit();
     }
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    $role = "user";
+    $role = "admin";
 
     $stmt = $conn->prepare("SELECT email FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($stmt->get_result()->num_rows > 0) {
         $_SESSION['error'] = "Email already exists!";
-        header("Location: ../view/signup.php");
+        header("Location: ../view/register.php");
         exit();
     }
 
@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else {
         $_SESSION['error'] = "Registration failed!";
-        header("Location: ../view/signup.php");
+        header("Location: ../view/register.php");
         exit();
     }
 }
